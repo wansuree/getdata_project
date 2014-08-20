@@ -31,14 +31,6 @@ y_test <- read.csv("./data/UCI\ HAR\ Dataset/test/y_test.txt",
                    sep = "", header = FALSE, stringsAsFactors=FALSE)
 
 ## 1. Merges the training and the test sets to create one data set.
-## 2. Extracts only the measurements on the mean and standard deviation 
-##    for each measurement.
-## 3. Uses descriptive activity names to name the activities in the data set.
-## 4. Appropriately labels the data set with descriptive variable names.
-## 5. Creates a second, independent tidy data set with the average of 
-##    each variable for each activity and each subject.
-
-## 1. Merges the training and the test sets to create one data set.
 df <- rbind(X_train, X_test)
 
 ## 2. Extracts only the measurements on the mean and standard deviation 
@@ -59,5 +51,5 @@ names(df) <- c("subject", "activity", varnames)
 
 ## 5. Creates a second, independent tidy data set with the average of 
 ##    each variable for each activity and each subject.
-
-# df2 <- split(df, df$activity)
+df2 <- aggregate(df[, 3:81], list(Activity = df$activity, Subject = df$subject), mean)
+write.table(df2, file = "./data/tidy_data.txt")
