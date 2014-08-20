@@ -1,12 +1,12 @@
-# ## check/create a dir called "data"
-# if(!file.exists("data")) {
-#     dir.create("data")
-# }
-# 
-# ## download the zip file
-# fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-# download.file(fileUrl, destfile = "./data/Dataset.zip", method = "curl")
-# unzip("./data/Dataset.zip", exdir = "./data/")
+## check/create a dir called "data"
+if(!file.exists("data")) {
+    dir.create("data")
+}
+
+## download the zip file
+fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(fileUrl, destfile = "./data/Dataset.zip", method = "curl")
+unzip("./data/Dataset.zip", exdir = "./data/")
 
 ## load the data
 activity_labels <- read.csv("./data/UCI\ HAR\ Dataset/activity_labels.txt", 
@@ -52,4 +52,4 @@ names(df) <- c("subject", "activity", varnames)
 ## 5. Creates a second, independent tidy data set with the average of 
 ##    each variable for each activity and each subject.
 df2 <- aggregate(df[, 3:81], list(Activity = df$activity, Subject = df$subject), mean)
-write.table(df2, file = "./data/tidy_data.txt")
+write.table(df2, file = "./tidy_data.txt", row.name=FALSE)
