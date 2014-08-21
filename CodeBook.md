@@ -13,15 +13,33 @@ which can be downloaded at:
 
 Raw Data
 ----------------
+Part 1: Training data
+Cases: 7352
+Variables: 561
+
+Part 2: Testing data
+Cases: 2947
+Variables: 561
+
+For information about the variables, summary choices, and experimental study design, see
+* ./data/UCI\ HAR\ Dataset/README.txt
+* ./data/UCI\ HAR\ Dataset/features.txt 
+* ./data/UCI\ HAR\ Dataset/features_info.txt
 
 
-Tiday Data
+Tidy Data
 ----------------
-`run_analysis.R` provides a tidy dataset of these data.  The selected variables 
+79 variables: mean() std()
+`run_analysis.R` provides a tidy dataset of these data.
+
+Cases: 180
+Variables: 81
 
 
 
 
+
+----------------
 * Information about the variables (including units!) in the data set not contained in the tidy data
 * Information about the summary choices you made
 * Information about the experimental study design you used
