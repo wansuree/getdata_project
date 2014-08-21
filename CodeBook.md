@@ -33,19 +33,11 @@ Tidy Data
   * Cases: 180
   * Variables: 81
 
-1. Merges the training and the test sets to create one data set.
+The Tidy Data were created by first merging the training and the test sets into one data set.  From this data set, the mean and standard deviation for each measurement were extracted.  The number of variables were reduced from 561 in the Raw Data to 79.  The merged data contained 10,299 cases.  Note that 'meanFreq' values were considered as part of the 'mean' group.  
 
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
+Two variables: Subject, and Activity, were merged to the data set.  A new data frame was created from this data set with the average of each variable for each activity and each subject.  Thus, this tidy data frame contained 81 sets of variables.  Since each subject performed six different activity, and there were 30 subjects in total, the Tidy Data contained 180 cases (30 x 6).
 
-5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
-
-
-----------------
-* Information about the variables (including units!) in the data set not contained in the tidy data
-* Information about the summary choices you made
-* Information about the experimental study design you used
+'Subject' was the first column of the Tidy Data, indicating the ID of each subject.  The values in this first column were unitless. The second column was 'Activity' with six different factor values: walking, walking_upstairs, walking_downstairs, sitting, standing, and laying.  These values were also unitless.  The rest of the columns were average of either mean or standard deviation of the signals from the sensors.  Thus, the units should be the same as their corresponding measurements.  Since README.txt nor features_info.txt did not indicated whether these signals were collected in volts or millivolts, the author was not able to speculate the units of these columns.
 
 
-** Was code book submitted to GitHub that modifies and updates the codebooks available to you with the data to indicate all the variables and summaries you calculated, along with units, and any other relevant information?
 
