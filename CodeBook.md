@@ -1,6 +1,25 @@
-The code book
+The Code Book
 ----------------
-This is the description on the variables, the data, and the transformations performed to clean up the data.
+This is the description on the variables, the data, and the transformations performed to clean up the data.  
+
+"Human Activity Recognition Using Smartphones Dataset" was used in this project.  The data were collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data were obtained:
+
+<url>http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones</url>
+
+which can be downloaded at:
+
+<url>https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip</url>
+
+
+Raw Data
+----------------
+
+
+Tiday Data
+----------------
+`run_analysis.R` provides a tidy dataset of these data.  The selected variables 
+
+
 
 
 * Information about the variables (including units!) in the data set not contained in the tidy data
@@ -8,4 +27,5 @@ This is the description on the variables, the data, and the transformations perf
 * Information about the experimental study design you used
 
 
+** Was code book submitted to GitHub that modifies and updates the codebooks available to you with the data to indicate all the variables and summaries you calculated, along with units, and any other relevant information?
 
